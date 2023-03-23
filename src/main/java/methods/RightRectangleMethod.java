@@ -1,8 +1,8 @@
 package methods;
 
 public class RightRectangleMethod extends Method{
-    public RightRectangleMethod(int chosenFunction, double a, double b, int n) {
-        super(chosenFunction,a,b,n);
+    public RightRectangleMethod(int chosenFunction, double a, double b, double e) {
+        super(chosenFunction,a,b,e);
     }
 
 

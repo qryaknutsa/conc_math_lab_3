@@ -2,8 +2,8 @@ package methods;
 
 public class MiddleRectangleMethod extends Method {
 
-    public MiddleRectangleMethod(int chosenFunction, double a, double b, int n) {
-        super(chosenFunction,a,b,n);
+    public MiddleRectangleMethod(int chosenFunction, double a, double b, double e) {
+        super(chosenFunction,a,b,e);
     }
 
 

@@ -4,12 +4,12 @@ import java.util.random.RandomGenerator;
 
 public class LeftRectangleMethod extends Method {
 
-    public LeftRectangleMethod(int chosenFunction, double a, double b, int n) {
-        super(chosenFunction,a,b,n);
+    public LeftRectangleMethod(int chosenFunction, double a, double b, double e) {
+        super(chosenFunction,a,b,e);
     }
 
     @Override
-    public double getIntegral(int n ) {
+    public double getIntegral(int n) {
         double a = super.getA();
         double b = super.getB();
         double h = (b - a) / n;

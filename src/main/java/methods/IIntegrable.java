@@ -1,6 +1,6 @@
 package methods;
 
-interface IIntegrable {
+public interface IIntegrable {
 
     double getIntegral(int n);
 

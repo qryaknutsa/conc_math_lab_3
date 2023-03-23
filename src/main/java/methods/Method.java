@@ -2,7 +2,7 @@ package methods;
 
 import static java.lang.Math.*;
 
-abstract class Method implements IIntegrable {
+public abstract class Method implements IIntegrable {
     private final int chosenFunction;
 
     public int getChosenFunction() {
@@ -19,15 +19,15 @@ abstract class Method implements IIntegrable {
 
     private final double a;
     private final double b;
-    private final int n;
+    private final double e;
 
-    public Method(int chosenFunction, double a, double b, int n) {
+
+    public Method(int chosenFunction, double a, double b, double e) {
         this.chosenFunction = chosenFunction;
         this.a = a;
         this.b = b;
-        this.n = n;
+        this.e = e;
     }
-
 
     double f(double x) {
         return switch (chosenFunction) {
@@ -40,24 +40,11 @@ abstract class Method implements IIntegrable {
     }
 
 
-    public double getInfelicity(int type) {
-        int k;
-        if (type == 5) k = 4;
-        else k = 2;
-        IIntegrable method;
-        switch (type) {
-            case 1 -> method = new LeftRectangleMethod(chosenFunction, a, b, n);
-            case 2 -> method = new RightRectangleMethod(chosenFunction, a, b, n);
-            case 3 -> method = new MiddleRectangleMethod(chosenFunction, a, b, n);
-            case 4 -> method = new TrapezoidalMethod(chosenFunction, a, b, n);
-            default -> method = new SimpsonMethod(chosenFunction, a, b, n);
-        }
-        return (method.getIntegral(2 * n) - method.getIntegral(n)) / (pow(2, k) - 1);
-    }
-
 
     @Override
     public double getIntegral(int n) {
         return 0;
     }
+
+
 }

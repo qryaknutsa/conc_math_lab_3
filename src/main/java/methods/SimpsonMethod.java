@@ -2,8 +2,8 @@ package methods;
 
 public class SimpsonMethod extends Method {
 
-    public SimpsonMethod(int chosenFunction, double a, double b, int n) {
-        super(chosenFunction,a,b,n);
+    public SimpsonMethod(int chosenFunction, double a, double b, double e) {
+        super(chosenFunction,a,b,e);
     }
 
     @Override
